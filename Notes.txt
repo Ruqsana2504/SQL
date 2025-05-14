@@ -1,0 +1,9 @@
+PRIMARY KEY
+It is a column(or set of columns) in a table that uniquely identifies each row.
+Primary key should not be NULL.
+
+
+FOREIGN KEY
+It is a column(or set of columns) in a table that refers to the primary key in other table.
+There can be multiple FKs.
+Foreign Keys can have duplicate and NULL values.
