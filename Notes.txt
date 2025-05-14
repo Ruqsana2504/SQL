@@ -1,9 +1,65 @@
 PRIMARY KEY
+-----------
 It is a column(or set of columns) in a table that uniquely identifies each row.
 Primary key should not be NULL.
 
 
 FOREIGN KEY
+-----------
 It is a column(or set of columns) in a table that refers to the primary key in other table.
 There can be multiple FKs.
 Foreign Keys can have duplicate and NULL values.
+
+
+CONSTRAINTS
+-----------
+NOT NULL
+UNIQUE
+PRIMARY KEY
+FOREIGN KEY
+DEFAULT
+CHECK(Condition)
+
+
+SELECT, WHERE, DISTINCT, LIMIT
+
+OPERATORS
+---------
+Arithmetic Operators : +, -, *, /, %
+Comparison Operators : =, >, <, >=, <=, <>
+Logical Operators : AND, OR, NOT, IN, BETWEEN, EXISTS, LIKE, SOME, ALL, ANY
+Bitwise Operators : &, |, ^
+Compound Operators : +=, -=, *=, /=, %=, &=, ^-=, |*=
+
+
+AGGREGATE FUNCTIONS
+-------------------
+COUNT()
+MAX()
+MIN()
+SUM()
+AVG()
+
+
+GROUP BY
+--------
+Groups rows that have same values into summary rows.
+It collects data from multiple records and groups the result by one or more column.
+
+* Generally we use GROUP BY with some aggregate function.
+
+
+HAVING(Condition on groups)
+------
+Similar to where i.e. applies some condition on rows.
+Used when we want to apply any condition after grouping
+
+
+GENERAL ORDER
+-------------
+SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY
+
+
+
+
+
