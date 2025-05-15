@@ -121,6 +121,41 @@ It is a regular join but the table is joined with itself
 SELECT column(s) FROM table as a INNER JOIN table as b ON a.col_name = b.col_name;
 
 
+UNION
+-----
+It is used to combine the result-set of two or more SELECT statements.
+Gives UNIQUE records.
+
+To use it:
+	- every SELECT should have same no. of columns
+	- columns must have similar data types
+	- columns in every SELECT should be in same order
+
+SELECT column(s) FROM tableA UNION SELECT column(s) FROM tableB;
+
+UNION ALL
+---------
+It allows duplicates
+
+
+SQL SUB QUERIES
+---------------
+A subquery or inner query or a nested query is a query within another SQL query.
+It involves 2 selected statements.
+It can be used in SELECT, FROM, WHERE
+
+SELECT column(s) FROM table_name WHERE col_name operator (subquery);
+
+
+MYSQL VIEWS
+-----------
+A view is a virtual table based on the result set of an SQL statement.
+
+CREATE VIEW view1 as SELECT rollno, name, marks FROM student;
+
+
+
+
 
 
 

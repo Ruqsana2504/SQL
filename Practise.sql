@@ -113,3 +113,7 @@ DELETE FROM student WHERE marks < 30;
 UPDATE dept SET id = 103 where id = 102;
 UPDATE dept SET id = 111 where id = 101;
 
+#Views
+CREATE VIEW view1 as SELECT name FROM student;
+SELECT * FROM view1;
+DROP VIEW view1;

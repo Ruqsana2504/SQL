@@ -61,3 +61,20 @@ SELECT * FROM student as s CROSS JOIN course as c ON s.id = c.id;
 #SELF JOIN(Executes right to left, first name is manager, second is employee)
 SELECT a.name as manager_name, b.name FROM employee as a JOIN employee as b ON a.id = b.manager_id;
 
+#UNION
+SELECT name FROM employee 
+UNION
+SELECT name FROM employee;
+
+#SUB QUERY
+SELECT name, marks from student WHERE marks > (SELECT AVG(marks) FROM student);
+
+#SUB QUERY WITH IN - Find the names of all students with even roll numbers
+SElECT names FROM student WHERE rollno % 2 = 0;
+SElECT names FROM student WHERE rollno IN (SELECT rollno FROM student WHERE rollno % 2 = 0);
+
+#SUB QUERY WITH FROM - Find the max marks from the students of Delhi
+SElECT name, MAX(marks) FROM (SELECT * FROM student WHERE city = "Delhi") AS temp;
+
+#SUB QUERY WITH SELECT
+SElECT (SELECT MAX(marks) FROM student) name FROM student;

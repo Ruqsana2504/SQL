@@ -39,5 +39,3 @@ WHERE
 # In Student Table - Delete the column for grades
 ALTER TABLE student
 	DROP COLUMN grade;
-    
-    
