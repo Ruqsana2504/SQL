@@ -50,7 +50,7 @@ It collects data from multiple records and groups the result by one or more colu
 
 
 HAVING(Condition on groups)
-------
+---------------------------
 Similar to where i.e. applies some condition on rows.
 Used when we want to apply any condition after grouping
 
@@ -94,6 +94,35 @@ DML(Data Manipulation Language) COMMANDS
 UPDATE Rows - UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition;
 DELETE Row - DELETE FROM table_name WHERE condition;
 	   - DELETE FROM table_name;  -- this deletes everything in the table!
+
+
+JOINS
+-----
+INNER JOIN 
+Returns all matched records.
+SELECT column(s) FROM tableA INNER JOIN tableB ON tableA.col_name = tableB.col_name;
+
+LEFT JOIN
+Returns all records from the left table and matched records from the right table.
+SELECT column(s) FROM tableA LEFT JOIN tableB ON tableA.col_name = tableB.col_name;
+
+RIGHT JOIN
+Returns all matched records from the left table and all records from the right table.
+SELECT column(s) FROM tableA RIGHT JOIN tableB ON tableA.col_name = tableB.col_name;
+
+FULL JOIN
+Returns all records when there is a match in either left or right table.
+SELECT column(s) FROM tableA LEFT JOIN tableB ON tableA.col_name = tableB.col_name 
+			UNION 
+SELECT column(s) FROM tableA RIGHT JOIN tableB ON tableA.col_name = tableB.col_name ;
+
+SELF JOIN
+It is a regular join but the table is joined with itself
+SELECT column(s) FROM table as a INNER JOIN table as b ON a.col_name = b.col_name;
+
+
+
+
 
 
 

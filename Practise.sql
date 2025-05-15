@@ -69,11 +69,6 @@ INSERT INTO customers (customer_id, customer, mode, city) VALUES
 (109, 'Isabella Martinez', 'Netbanking', 'Nashville'),
 (110, 'Jackson Brooks', 'Credit Card', 'Boston');
 -------------------------------------------------------------
-
-SELECT * FROM student;
-
-select * from customers;
-
 SELECT * 
 FROM student 
 WHERE marks > 80;
