@@ -27,4 +27,5 @@
 | 108         | Lucas Carter       | Netbanking  | Boston        |
 | 109         | Isabella Martinez  | Netbanking  | Nashville     |
 | 110         | Jackson Brooks     | Credit Card | Boston        |
-+-------------+--------------------
++-------------+--------------------+-------------+---------------+
+

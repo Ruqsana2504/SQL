@@ -60,6 +60,46 @@ GENERAL ORDER
 SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY
 
 
+FOREIGN KEY
+-----------
+CASCADING -
+1. On delete Cascade - When we create a foreign key using this option, it deletes the referencing rows in the child table when the referenced row is deleted in the parent table which has a primary key
+2. On update Cascade - When we create a foreign key using this option, it updates the referencing rows in the child table when the referenced row is deleted in the parent table which has a primary key
+
+
+Types of SQL Commands
+---------------------
+1. DDL(Data Definition Language) - CREATE, ALTER, RENAME, TRUNCATE, DROP
+2. DQL(Data Query Language) - SELECT
+3. DML(Data Manipulation Language) - INSERT, UPDATE, DELETE
+4. DCL(Data Control Language) - GRANT, REVOKE
+5. TCL(Transaction Control Language) - BEGIN, COMMIT, ROLLBACK, SAVEPOINT
+
+DDL(Data Definition Language)
+-----------------------------
+ALTER
+-----
+ADD Column - ALTER TABLE table_name ADD COLUMN column_name datatype constraint;
+MODIFY Column (datatype/constraint) - ALTER TABLE table_name MODIFY COLUMN column_name new_datatype new_constraint;
+CHANGE Column(rename) - ALTER TABLE table_name CHANGE COLUMN old_name new_name new_datatype new_constraint; 
+DROP Column- ALTER TABLE table_name DROP COLUMN column_name;
+
+NOTE : COLUMN keyword is optional in MODIFY, CHANGE, DROP. Never used in RENAME.
+
+RENAME Table - ALTER TABLE table_name RENAME TO new_table_name;
+TRUNCATE (to delete table's data) - TRUNCATE TABLE table_name;
+
+DML(Data Manipulation Language) COMMANDS
+---------------------------------------
+UPDATE Rows - UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition;
+DELETE Row - DELETE FROM table_name WHERE condition;
+	   - DELETE FROM table_name;  -- this deletes everything in the table!
+
+
+
+
+
+
 
 
 

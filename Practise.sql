@@ -19,6 +19,37 @@ VALUES
 (105, "enamuel", 12, "F", "Delhi"),
 (106, "farah", 82, "B", "Delhi");
 -------------------------------------------------------------
+#PARENT TABLE
+CREATE TABLE dept(
+	id INT PRIMARY KEY,
+    name VARCHAR(50)
+);
+
+INSERT INTO dept
+(id, name)
+VALUES
+(101, "english"),
+(102, "IT");
+
+SELECT * FROM dept;
+
+#CHILD TABLE
+CREATE TABLE teacher(
+	id INT PRIMARY KEY,
+    name VARCHAR(50),
+    dept_id INT,
+    FOREIGN KEY (dept_id) REFERENCES dept(id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+);
+
+INSERT INTO teacher
+VALUES
+(101, "Adam", 101),
+(102, "Eve", 102);
+
+SELECT * FROM teacher;
+-------------------------------------------------------------
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY,
     customer VARCHAR(100),
@@ -80,7 +111,10 @@ SET SQL_SAFE_UPDATES = 0;
 UPDATE student SET grade = "O" WHERE grade = "A";
 UPDATE student SET marks = marks + 1;
 
-
 #DELETE
 DELETE FROM student WHERE marks < 30;
+
+#Foreign Key
+UPDATE dept SET id = 103 where id = 102;
+UPDATE dept SET id = 111 where id = 101;
 
